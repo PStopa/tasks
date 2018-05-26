@@ -35,6 +35,8 @@ public class TrelloMapperTestSuite {
         assertEquals("2", boards.get(1).getId());
         assertEquals("First", boards.get(0).getName());
         assertEquals("Second", boards.get(1).getName());
+        assertEquals(0, boards.get(0).getLists().size());
+        assertEquals(0, boards.get(1).getLists().size());
     }
 
     @Test
@@ -54,6 +56,8 @@ public class TrelloMapperTestSuite {
         assertEquals("2", trelloBoardDtos.get(1).getId());
         assertEquals("First", trelloBoardDtos.get(0).getName());
         assertEquals("Second", trelloBoardDtos.get(1).getName());
+        assertEquals(0, trelloBoardDtos.get(0).getLists().size());
+        assertEquals(0, trelloBoardDtos.get(1).getLists().size());
     }
 
     @Test
@@ -71,6 +75,8 @@ public class TrelloMapperTestSuite {
         assertEquals("2", trelloList.get(1).getId());
         assertEquals("First", trelloList.get(0).getName());
         assertEquals("Second", trelloList.get(1).getName());
+        assertTrue(trelloList.get(0).isClosed());
+        assertTrue(trelloList.get(1).isClosed());
     }
 
     @Test
@@ -87,6 +93,8 @@ public class TrelloMapperTestSuite {
         assertEquals("2", trelloListDto.get(1).getId());
         assertEquals("First", trelloListDto.get(0).getName());
         assertEquals("Second", trelloListDto.get(1).getName());
+        assertTrue(trelloList.get(0).isClosed());
+        assertTrue(trelloList.get(1).isClosed());
     }
 
     @Test
