@@ -120,9 +120,9 @@
                                         </table>
 
                                         <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
-                                            Application functionality:
+                                            Application information:
                                         </p>
-                                        <ul th:each="function : ${application_functionality}">
+                                        <ul th:each="function : ${app_information}">
                                             <li th:text="${function}"></li>
                                         </ul>
 
@@ -146,7 +146,7 @@
                         <tr>
                             <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
                                 <span class="apple-link" style="color: #999999; font-size: 12px; text-align: center;">
-                                    <span th:text="${company_name}"></span>, <span th:text="${company_street}"></span> <span th:text="${company_street_number}"></span>
+                                    <span th:text="${admin_config.getCompanyName()}"></span>, <span th:text="${admin_config.getCompanyStreet()}"></span> <span th:text="${admin_config.getCompanyStreetNumber()}"></span>
                                 </span>
                             </td>
                         </tr>
